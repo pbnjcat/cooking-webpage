@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+}
+
+#websiteTitle{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.ingredients{
+    font-size: 16px;
+    white-space: pre 
+}
+
+.instructions{
+    font-size: 16px;
+    white-space: li
+}
+
+img{
+    width:500px;
+    height:auto;
+}
