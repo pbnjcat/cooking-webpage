@@ -4,31 +4,347 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="favicon.ico"/>
+    <link rel="icon" href="images/favicon.ico"/>
     <title>Randy's Cooking Recipe Archive</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <header>
+      <div class="nav-bar">
+        <a href="../index.html">
+        <img src="./images/logo.png" alt="" class="logo">
+        </a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="title-area">
     <h1 id="websiteTitle">Randy's Cooking Recipe Archive</h1>
-    <div class="food-genre">
-        <ul>
-          <li><a href="bread/banana-bread.html">Banana Bread</a></li>
-          <li><a href="bread/date-nut-bread.html">Old-Fashioned Date Walnut Bread</a></li>
-          <li><a href="bread/irish-soda-bread.html">Grandma's Irish Soda Bread</a></li>
-          <li><a href="bread/artisan-bread.html">Homemade Artisan Bread</a></li>
-          <li><a href="bread/cinnamon-raison-bread.html">Cinnamon Raisin Bread</a></li>
-          <li><a href="baked-goods/matcha-cupcake.html">Matcha Cupcakes</a></li>
-          <li><a href="baked-goods/panettone-cake.html">Easy Panettone Cake</a></li>
-          <li><a href="baked-goods/gingerbread-cookie.html">Gingerbread Cookies</a></li>
-          <li><a href="pizza/king-arthur-pizza.html">King Arthur Flour Pizza Dough</a></li>
-          <li><a href="ethnic-foods/mantou-.html">Steamed Buns - Mantou</a></li>
-          <li><a href="ethnic-foods/pineapple-bun.html">Pineapple Buns - Bo luo Bao</a></li>
-          <li><a href="ethnic-foods/bake-pork-bun.html">Char Siu Bao - BBQ Pork Bun(baked)</a></li>
-          <li><a href="ethnic-foods/steam-pork-bun.html">Char Siu Bao - BBQ Pork Bun(steamed)</a></li>
-          <li><a href="ethnic-foods/cumin-lamb.html">Real-Deal Xinjiang Cumin Lamb (孜然羊肉)</a></li>
-          <li><a href="ethnic-foods/custard-steam-bun.html">Cantonese Steamed Custard Buns - Nai Wong Bao</a></li>
-        </ul>
+  </div>
+    <div class="menu">
+      <h2 class="menu-group-heading">Bread</h2>
+      <div class="menu-group">
+          <div class="menu-item">
+            <a href="./bread/banana-bread.html">
+              <button class="btn">
+                <img src="./images/banana-bread.png" alt="" class="menu-item-img">
+                <div class="menu-item-text">
+                  <div class="menu-item-heading">
+                    <h3>Banana Bread</h3>
+                  </div>  
+                  <div class="menu-item-desc">
+                    <p>Servings: 12</p>
+                    <p>Cooking and Prep: 1 hr 20 mins</p>
+                  </div>
+                </div>
+              </button>
+            </a>
+          </div>
+          <div class="menu-item">
+            <a href="bread/date-nut-bread.html">
+              <button class="btn">
+                <img src="./images/date-nut-bread.png" alt="" class="menu-item-img">
+                <div class="menu-item-text">
+                  <div class="menu-item-heading">
+                    <h3>Old-Fashioned Date Walnut Bread</h3>
+                  </div>  
+                  <div class="menu-item-desc">
+                    <p>Servings: 16</p>
+                    <p>Prep: 10 mins Cook: 45 - 55 mins</p>
+                  </div>
+                </div>
+              </button>
+            </a>
+          </div>
+          <div class="menu-item">
+            <a href="bread/artisan-bread.html">
+              <button class="btn">
+                <img src="./images/artisanbread.png" alt="" class="menu-item-img">
+                <div class="menu-item-text">
+                  <div class="menu-item-heading">
+                    <h3>Homemade Artisan Bread</h3>
+                  </div>  
+                  <div class="menu-item-desc">
+                    <p>Servings: 2 8-inch loaves</p>
+                    <p>Prep: 4 hrs Cook: 25 mins</p>
+                  </div>
+                </div>
+              </button>
+            </a>
+          </div>
+          <div class="menu-item">
+            <a href="bread/cinnamon-raison-bread.html">
+              <button class="btn">
+                <img src="./images/cinnamonraisinbread.png" alt="" class="menu-item-img">
+                <div class="menu-item-text">
+                  <div class="menu-item-heading">
+                    <h3>Cinnamon Raisin Bread</h3>
+                  </div>  
+                  <div class="menu-item-desc">
+                    <p>Servings: 3 Loaves</p>
+                    <p>Prep: 30 mins + 2 hrs 5 mins Cook: 45 mins</p>
+                  </div>
+                </div>
+              </button>
+            </a>
+          </div>
+          <div class="menu-item">
+            <a href="bread/irish-soda-bread.html">
+              <button class="btn">
+                <img src="./images/irishsodabread.png" alt="" class="menu-item-img">
+                <div class="menu-item-text">
+                  <div class="menu-item-heading">
+                    <h3>Grandma's Irish Soda Bread </h3> 
+                  </div>
+                  <div class="menu-item-desc">
+                    <p>Serving: 1 loaf</p>
+                    <p>Prep: 10 mins Cook: 45 mins</p>
+                  </div>
+                </div>
+              </button>
+            </a>
+          </div>
+      </div>
+      <h2 class="menu-group-heading">
+        Baked Goods
+      </h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <a href="./baked-goods/matcha-cupcake.html">
+            <button class="btn">
+              <img src="./images/matcha-cupcake.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Matcha Cupcake</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Serving: 12 cupcakes</p>
+                  <p>Prep: 15 minutes Cook: 17 minutes</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./baked-goods/panettone-cake.html">
+            <button class="btn">
+              <img src="./images/panettone-cake.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Easy Panettone Cake</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Serving: 1 cake</p>
+                  <p>Prep: 30 mins + 3 hrs Cook: 50 mins</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./baked-goods/gingerbread-cookie.html">
+            <button class="btn">
+              <img src="./images/gingerbread-cookie.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Gingerbread Cookies</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Serving: 24 four-inch cookies </p>
+                  <p>Prep: 4 hrs Cook: 10 mins</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./baked-goods/stickytoffee-pudding.html">
+            <button class="btn">
+              <img src="./images/stickytoffepudding.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Sticky Toffee Pudding</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Serving: 6 to 8 servings </p>
+                  <p>Cook + prep: About 1 hour</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./baked-goods/apple-pie.html">
+            <button class="btn">
+              <img src="./images/applepie.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Cinnamon Crumble Apple Pie</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Serving: 8 Servings </p>
+                  <p>Cook: 40 mins</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./baked-goods/matcha-lava-cake.html">
+            <button class="btn">
+              <img src="./images/matchalavacake.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Matcha Lava Cake</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Serving: 2 Servings </p>
+                  <p>Prep:  15 minutes Cook: 16 mins</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+      <h2 class="menu-group-heading">Pizza</h2>
+      <div class="menu-item">
+        <a href="./pizza/king-arthur-pizza.html">
+          <button class="btn">
+            <img src="./images/kingarthurpizza.png" alt="" class="menu-item-img">
+            <div class="menu-item-text">
+              <div class="menu-item-heading">
+                <h3>King Arthur Pizza Crust</h3> 
+              </div>
+              <div class="menu-item-desc">
+                <p>1 or 2 round pizzas, 12 servings</p>
+                <p>Prep: 20 mins + 3 hours 8 mins Cook: 18-30 mins</p>
+              </div>
+            </div>
+          </button>
+        </a>
+      </div>
+      <h2 class="menu-group-heading">Ethnic-foods</h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <a href="./ethnic-foods/mantou.html">
+            <button class="btn">
+              <img src="./images/mantou.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Steamed Buns - Mantou</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Servings: 8</p>
+                  <p>Prep: 20 minutes + 1 hr Cook: 10 mins</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./ethnic-foods/pineapple-bun.html">
+            <button class="btn">
+              <img src="./images/pineapple bun.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Pineapple Buns</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Servings: 12</p>
+                  <p>Prep: 2 hours 30 minutes Cook:  12 minutes</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./ethnic-foods/bake-pork-bun.html">
+            <button class="btn">
+              <img src="./images/bbqbunbaked.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Char Siu Bao - BBQ Pork Bun(Baked)</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Servings: 16</p>
+                  <p>Prep: 4 hours Cook: 25 minute</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./ethnic-foods/steam-pork-bun.html">
+            <button class="btn">
+              <img src="./images/bbqbunsteamed.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Char Siu Bao - BBQ Pork Bun(Steamed)</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Servings: 10</p>
+                  <p>Prep: 3 hours Cook: 30 minutes</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./ethnic-foods/cumin-lamb.html">
+            <button class="btn">
+              <img src="./images/cuminlamb.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Xinjiang Cumin Lamb (孜然羊肉)</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Servings: 4</p>
+                  <p>Prep: 15 mins + 30 mins Cook: 10 minutes</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./ethnic-foods/custard-steam-bun.html">
+            <button class="btn">
+              <img src="./images/custardbun.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Cantonese Steamed Custard Buns - Nai Wong Bao</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Servings: 12</p>
+                  <p>Prep:3 hours Cook: 15 minutes</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="./ethnic-foods/mongolian-beef.html">
+            <button class="btn">
+              <img src="./images/mongolian-beef.png" alt="" class="menu-item-img">
+              <div class="menu-item-text">
+                <div class="menu-item-heading">
+                  <h3>Mongolian Beef</h3> 
+                </div>
+                <div class="menu-item-desc">
+                  <p>Servings: 12</p>
+                  <p>Prep:3 hours Cook: 15 minutes</p>
+                </div>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
     </div>
-	<script src="app.js"></script>
+	  <script src="app.js"></script>
   </body>
 </html>

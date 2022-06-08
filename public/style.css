@@ -1,23 +1,216 @@
-body {
-    background-color: lightblue;
+body  {
+    padding: 1.5em;
+    background-color: bisque;
 }
 
-#websiteTitle{
+.nav-bar ul{
+    float: right;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 5em;
+    margin-top: 0.5em;
+    list-style: none;
+    font-family:sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: white;
+}
+
+header{
+    display:block;
+    margin: -2em;
+    background-color: tan;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 5em;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo{
+    float: left;
+    height: 2.5em;
+    width: auto;
+    padding: 0.5em;
+    margin-left: 4em;
+}
+
+.title-area {
+    border-radius: 25px;
+    background-image: url(./images/sfimage.png);
+    padding: 2em;
+    background-position: center -6em;
+    margin-bottom: 4em;
+    margin-top: 3em;
+}
+
+#websiteTitle {
     text-align: center;
-    margin-top: 5%;
+    margin-bottom: 6em;
+    margin-top: 4em;
+    min-height: 100%;
+    color: blanchedalmond;
+    font-family: sans-serif;
 }
 
-.ingredients{
+.about-title{
+    font-size:36px;
+    margin-top: 3em;
+    margin-left: 30%;
+    font-family: sans-serif;
+}
+
+.page-title {
+    margin-top: 3em;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar img{
+    height: 15em;
+    width: 15em;
+}
+
+.biography {
+    margin-left: 30%;
+    margin-right: 30%;
+    line-height: 2em;
+    font-family: sans-serif;
+}
+
+.menu {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.menu-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    margin-bottom: 3em;
+}
+
+.menu-item {
+    display:flex;
+    width: 40em;
+}
+
+.menu-item-img {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+    border-radius: 2em;
+}
+
+.menu-item a {
+    margin-left: 4em;
+    text-decoration: none;
+    width: 100%;
+}
+
+.menu-item:hover {
+    background-color: burlywood;
+}
+
+.menu-item-desc p{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu-item-heading {
+    display: flex;
+    margin-right: 1.5em;
+    font-family: serif;
+}
+
+.menu-group-heading {
+    border-bottom: 2px solid grey;
+    margin-left: 4em;
+    margin-right: 4em;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: peachpuff;
+}
+
+.menu-item .btn{
+    display:flex;
+    padding: 1.5em;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.ingredients {
     font-size: 16px;
-    white-space: pre 
+    line-height: 1.5em;
+    white-space: pre;
 }
 
-.instructions{
+.message-box {
+    display: flex;
+    flex-direction: column;
+    height: 20em;
+    width: 20em;
+    line-height: 1.5em;
+}
+
+.message-box textarea{
+    margin-top: 1em;
+    resize: none;
+}
+
+.submit {
+
+}
+
+/* 
+Detects if screen is larger than 992px or desktop size
+*/
+@media screen and (min-width: 992px)  {
+    .menu {
+        font-size: 16px;
+    }
+
+    .menu-group {
+        /* 
+        Takes up two free space instead
+        */
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .menu-item-img {
+        width:120px;
+        height:120px;
+    }
+}
+
+.instructions {
     font-size: 16px;
-    white-space: li
+    line-height: 2em;
 }
 
-img{
+img {
     width:500px;
     height:auto;
 }
