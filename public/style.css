@@ -180,8 +180,10 @@ header::after {
     resize: none;
 }
 
-.submit {
-
+#btn_submit {
+    margin-top: 1.5em;
+    width: fit-content;
+    height: auto;
 }
 
 /* 

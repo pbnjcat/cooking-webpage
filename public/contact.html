@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="./images/favicon.ico" />
     <title>Randy's Cooking Recipe Archive</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <header>
-        <div class="nav-bar">
-          <a href="../index.html">
-          <img src="./images/logo.png" alt="" class="logo">
-          </a>
-          <nav>
-            <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="./about.html">About</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-              <li><a href="#"></a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <div class="nav-bar">
+        <a href="../index.html">
+          <img src="./images/logo.png" alt="" class="logo" />
+        </a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="page-title">
-        <h1>Contact Me!</h1>
+      <h1>Contact Me!</h1>
     </div>
-    <div class="message-box">
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname">
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email">
-        <textarea placeholder="Enter Message..." rows="10" cols="75"></textarea>
-    </div>
-    <button class="submit">Submit</button>
+    <form action="contact.html" method="post" class="message-box">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" />
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Enter Message..."
+        rows="10"
+        cols="75"
+      ></textarea>
+      <div id="success-message"></div>
+      <button type="submit" id="btn_submit">Submit</button>
+    </form>
+
+    <script type="text/javascript">
+      document.querySelector("form").addEventListener("submit", submitEquation);
+      function submitEquation(event) {
+        event.preventDefault();
+        let firstName = document.querySelector("#fname");
+        let email = document.querySelector("#email");
+        let message = document.querySelector("#message");
+        let successMessage = document.querySelector("#success-message")
+        let data = {
+          name: firstName.value,
+          email: email.value,
+          message: message.value,
+        };
+        fetch(window.location.href, {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => {
+            Object.keys(data).forEach ((key)=>  {
+              console.log('Key: ' + key + ', Value: ' + data[key])
+              if(data[key].val() == '') {
+                alert('Input can not be left blank!')
+              }
+            })
+            successMessage.textContent="Success!";
+            return res.json();
+          })
+          .catch((err) => {
+            alert(err);
+          })
+      }
+    </script>
   </body>
 </html>
