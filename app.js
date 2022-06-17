@@ -33,27 +33,25 @@ app.get("/", (req, res) => {
 });
 
 app.post("/contact.html", (req, res) => {
-  let firstName = req.body.name;
+  let userName = req.body.userName;
   let email = req.body.email;
   let message = req.body.message;
   let id = uuidv4();
 
-  set(ref(db, 'users/' + id), {
+  if(Object.values(req.body).includes('')) {
+    console.log('empty!')
+    res.status(500).json({});
+  }
+  else {
+    set(ref(db, 'users/' + id), {
+    user_name: userName,
     email: email,
-    first_name: firstName,
     message : message
-  });
+    });
+    
+  res.status(200).json({ data : `${ req.body}` });
+  }
 
- 
-  //   console.log(firstName)
-  //get collection data this moment
-  /*
-    getDocs(reference)
-    .then((snapshot) =>{
-      console.log(snapshot.docs);
-    })
-    */
-  res.status(200).json({ data: `Result is ${firstName}` });
 });
 
 app.listen(port, () => {

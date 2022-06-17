@@ -28,8 +28,8 @@
       <h1>Contact Me!</h1>
     </div>
     <form action="contact.html" method="post" class="message-box">
-      <label for="fname">First name:</label>
-      <input type="text" id="fname" name="fname" />
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
       <label for="email">Email:</label>
       <input type="text" id="email" name="email" />
       <textarea
@@ -47,12 +47,12 @@
       document.querySelector("form").addEventListener("submit", submitEquation);
       function submitEquation(event) {
         event.preventDefault();
-        let firstName = document.querySelector("#fname");
-        let email = document.querySelector("#email");
-        let message = document.querySelector("#message");
-        let successMessage = document.querySelector("#success-message")
+        const userName = document.querySelector("#name");
+        const email = document.querySelector("#email");
+        const message = document.querySelector("#message");
+        const successMessage = document.querySelector("#success-message")
         let data = {
-          name: firstName.value,
+          userName: userName.value,
           email: email.value,
           message: message.value,
         };
@@ -63,19 +63,20 @@
             "Content-Type": "application/json",
           },
         })
-          .then((res) => {
-            Object.keys(data).forEach ((key)=>  {
-              console.log('Key: ' + key + ', Value: ' + data[key])
-              if(data[key].val() == '') {
-                alert('Input can not be left blank!')
-              }
-            })
-            successMessage.textContent="Success!";
-            return res.json();
-          })
-          .catch((err) => {
-            alert(err);
-          })
+        .then((res) => {
+          for(let key in data) {
+            if(Object.values(data[key]) == '') {
+              alert('Input can not be left blank!');
+              return false;
+            }
+            console.log(Object.values(data))
+          }
+          successMessage.textContent="Success!";
+          return res.json();
+        })
+        .catch((err) => {
+          alert(err);
+        })
       }
     </script>
   </body>
