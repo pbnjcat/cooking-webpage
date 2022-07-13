@@ -1,6 +1,8 @@
 
 const express = require("express");
 const { path } = require("express/lib/application");
+const nodemailer = require("nodemailer");
+const exphbs = require('express-handlebars')
 const app = express();
 const port = 8080;
 
@@ -10,6 +12,7 @@ app.use(express.static("public"));
 
 const { v4: uuidv4 } = require('uuid');
 
+// firebase realtime set up
 const firebaseConfig = {
   apiKey: "AIzaSyBnliQ4NGZrSAwRNbWDM0TQfxFf8lHcyiE",
   authDomain: "cooking-website-a88eb.firebaseapp.com",
@@ -28,8 +31,15 @@ const { getDatabase, ref, set } = require('firebase/database');
 const application = initializeApp(firebaseConfig);
 const db = getDatabase(application);
 
+// view engine set up
+const { engine } = require("express-handlebars")
+
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+
+
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public"));
+  res.render(path.join(__dirname, "public"));
 });
 
 app.post("/contact.html", (req, res) => {
